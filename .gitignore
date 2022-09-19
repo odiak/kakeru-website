@@ -6,7 +6,6 @@
 !.yarn/versions
 .pnp.*
 node_modules
-.yarn
 
 .env
 .env.production
