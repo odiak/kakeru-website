@@ -358,6 +358,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.17.2":
+  version: 7.19.0
+  resolution: "@babel/runtime@npm:7.19.0"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: fa69c351bb05e1db3ceb9a02fdcf620c234180af68cdda02152d3561015f6d55277265d3109815992f96d910f3db709458cae4f8df1c3def66f32e0867d82294
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.18.10":
   version: 7.18.10
   resolution: "@babel/template@npm:7.18.10"
@@ -931,6 +940,23 @@ __metadata:
   dependencies:
     tslib: ^2.0.1
   checksum: 8674a77307764979f0a0b2006b7223a4b789abffaa7acbf6a1132650a799252155170173a1ff6a7fb6897f59437fc955f2707bdfc391b0797750898876e6c9ed
+  languageName: node
+  linkType: hard
+
+"astro-i18next@npm:^1.0.0-beta.10":
+  version: 1.0.0-beta.10
+  resolution: "astro-i18next@npm:1.0.0-beta.10"
+  dependencies:
+    "@proload/core": ^0.3.3
+    "@proload/plugin-tsm": ^0.2.1
+    i18next: ^21.9.1
+    iso-639-1: ^2.1.15
+    locale-emoji: ^0.3.0
+  peerDependencies:
+    astro: ^1.0.0
+  bin:
+    astro-i18next: dist/cli/index.js
+  checksum: 533cc18f4bb1727b0806e7a52858869f4240078c228580d0df7656056fd4e190c4d01b231e9e93d323ec7bc76fb0ec8ab99f7ca691cb27998d7645a55a649f75
   languageName: node
   linkType: hard
 
@@ -2495,6 +2521,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"i18next-fs-backend@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "i18next-fs-backend@npm:1.1.5"
+  checksum: 71f6c4b0ff071676d69f1668675a68f2d72e1836dafcc8014123523bb584a78b0e4fccd16f83d7f37755b58d1dfcb4d6ad36c60b261833b509ccf20313419d9e
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^21.9.1":
+  version: 21.9.2
+  resolution: "i18next@npm:21.9.2"
+  dependencies:
+    "@babel/runtime": ^7.17.2
+  checksum: e53b3885fa85cab7fcd4f8667b7fc3d37b06f095494703994d49fa0e961ad1f495181621e569dc58e759ff12c63a9c7704c33592ba529b7689ea7f5304be0423
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:^0.6.2":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
@@ -2716,6 +2758,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"iso-639-1@npm:^2.1.15":
+  version: 2.1.15
+  resolution: "iso-639-1@npm:2.1.15"
+  checksum: a201530819d33e9ce077b02c786d67b35be5d823be27b5aacc18d880e580e559e39ec5055f8e2abcdc210f46618a643bf3c74e6fe6e8255fe62059682750e595
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -2772,6 +2821,8 @@ __metadata:
   resolution: "kakeru-website@workspace:."
   dependencies:
     astro: ^1.2.6
+    astro-i18next: ^1.0.0-beta.10
+    i18next-fs-backend: ^1.1.5
     prettier: ^2.7.1
   languageName: unknown
   linkType: soft
@@ -2813,6 +2864,13 @@ __metadata:
     pify: ^4.0.1
     strip-bom: ^3.0.0
   checksum: d86d7ec7b15a1c35b40fb0d8abe710a7de83e0c1186c1d35a7eaaf8581611828089a3e706f64560c2939762bc73f18a7b85aed9335058c640e033933cf317f11
+  languageName: node
+  linkType: hard
+
+"locale-emoji@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "locale-emoji@npm:0.3.0"
+  checksum: 0e253dc9f93e836726f0c8526f81ad87e94aa4772a56026c3891b07f1882db60d347fe5d7d532209c6a4a5f81ecc40a5e13641b7978da6ee81a9898217501ac8
   languageName: node
   linkType: hard
 
@@ -4113,6 +4171,13 @@ __metadata:
     source-map: ~0.6.1
     tslib: ^2.0.1
   checksum: 14c35115cd9965950724cb2968f069a247fa79ce890643ab6dc3795c705b363f7b92a45238e9f765387c306763be9955f72047bb9d15b5d60b0a55f9e7912d5a
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.4":
+  version: 0.13.9
+  resolution: "regenerator-runtime@npm:0.13.9"
+  checksum: 65ed455fe5afd799e2897baf691ca21c2772e1a969d19bb0c4695757c2d96249eb74ee3553ea34a91062b2a676beedf630b4c1551cc6299afb937be1426ec55e
   languageName: node
   linkType: hard
 
