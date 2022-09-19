@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "generate-i18n": "astro-i18next generate"
+    "generate-i18n": "astro-i18next generate && prettier -w src/pages/**/*.astro"
   },
   "dependencies": {
     "@astrojs/tailwind": "^2.0.1",
