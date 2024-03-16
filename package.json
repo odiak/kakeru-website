@@ -11,13 +11,13 @@
     "generate-i18n": "astro-i18next generate && prettier -w src/pages/**/*.astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^2.0.1",
-    "astro": "^1.2.6",
-    "astro-i18next": "^1.0.0-beta.10",
-    "i18next-fs-backend": "^1.1.5",
-    "tailwindcss": "^3.0.24"
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.5.5",
+    "astro-i18next": "^1.0.0-beta.21",
+    "i18next-fs-backend": "^2.3.1",
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^3.2.5"
   }
 }
