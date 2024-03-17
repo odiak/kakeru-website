@@ -1,12 +1,117 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import { changeLanguage } from 'i18next'
+import { Icon } from 'astro-icon/components'
 
 changeLanguage('ja')
 ---
 
-<Layout title="Welcome to Astro.">
-  <div class="max-w-screen-md md:mx-auto">
-    <h1 class="text-3xl font-bold">Kakeru</h1>
+<Layout title="Kakeru: ブラウザで動く手書きメモアプリ">
+  <div class="max-w-screen-md md:mx-auto px-3 py-5">
+    <div class="flex items-center justify-center mt-4 mb-6">
+      <img src="/logo.png" alt="" class="mr-2" width="95" height="95" />
+      <h1 class="text-4xl font-bold">Kakeru</h1>
+    </div>
+
+    <p class="text-center">ブラウザで動く手書きメモアプリ</p>
+
+    <a
+      href="https://kakeru.app"
+      target="_blank"
+      class="bg-blue-500 rounded p-2 text-white block mx-auto w-fit mt-6"
+      >試してみる</a
+    >
+
+    <img src="/screenshot.png" alt="Screenshot of Kakeru" class="w-full my-6" />
+
+    <h2 class="mt-10 mb-6 text-3xl font-bold text-center">できること</h2>
+
+    <div class="md:flex md:gap-4">
+      <div class="flex-1 mb-4">
+        <Icon name="mdi:draw" class="mx-auto text-gray-400" size={100} />
+        <p>
+          パソコンやタブレット、スマートフォンなど様々なデバイスでマウスや指を使って書き込むことができます。スタイラス(Apple
+          Pencilを含む)にも対応しています。
+        </p>
+      </div>
+      <div class="flex-1 mb-4">
+        <Icon name="mdi:share" class="mx-auto text-gray-400" size={100} />
+        <p>
+          書いたメモのURLを友達に送ったり、2人で同時に書き込んだりすることができます。
+        </p>
+      </div>
+      <div class="flex-1 mb-4">
+        <Icon
+          name="mdi:file-export-outline"
+          class="mx-auto text-gray-400"
+          size={100}
+        />
+        <p>
+          書いたものはSVG画像として出力することができ、WikiやMarkdownファイルなどに埋め込むこともできます。
+        </p>
+      </div>
+    </div>
+
+    <div class="md:flex md:gap-4 mt-8">
+      <div class="flex-1 mb-4">
+        <Icon
+          name="mdi:arrow-expand-all"
+          class="mx-auto text-gray-400"
+          size={100}
+        />
+        <p>
+          画面は上下左右に無限にスクロールすることができ、好きな場所に書くことができます。紙のようにサイズを気にする必要はありません。
+        </p>
+      </div>
+      <div class="flex-1 mb-4">
+        <Icon
+          name="mdi:account-edit"
+          class="mx-auto text-gray-400"
+          size={100}
+        />
+        <p>
+          スタイラスを使用するとき、次のようなアイコンのボタンをタップして指では線が書き込まれないようにすることができます:
+          <img
+            src="/palm-rejection.png"
+            width="40"
+            height="30"
+            class="inline-block"
+          />
+        </p>
+      </div>
+    </div>
+
+    <h2 class="mt-10 mb-4 text-3xl font-bold text-center">Links</h2>
+
+    <div class="md:flex">
+      <div class="flex-1 text-center">
+        <Icon name="mdi:twitter" class="mx-auto text-gray-400" size={100} />
+        <p>
+          <a
+            href="https://twitter.com/kakeru_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline text-xl">Twitter</a
+          >
+        </p>
+        <p>
+          フォローしていただくと、アプリの更新情報などをいち早く入手できます！
+        </p>
+      </div>
+      <div class="flex-1 text-center">
+        <Icon name="mdi:coffee" class="mx-auto text-gray-400" size={100} />
+        <p>
+          <a
+            href="https://www.buymeacoffee.com/odiak"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline text-xl">Buy Me a Coffee</a
+          >
+        </p>
+        <p>よろしければ、開発を支援していただけるとありがたいです</p>
+      </div>
+    </div>
+
+    <p class="mt-10 text-center">&copy; 2020 岩本海童</p>
   </div>
 </Layout>

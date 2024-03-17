@@ -1,12 +1,120 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import { changeLanguage } from 'i18next'
+import { Icon } from 'astro-icon/components'
 
 changeLanguage('en')
 ---
 
-<Layout title="Welcome to Astro.">
-  <div class="max-w-screen-md md:mx-auto">
-    <h1 class="text-3xl font-bold">Kakeru</h1>
+<Layout title="Kakeru: drawing app on browser">
+  <div class="max-w-screen-md md:mx-auto px-3 py-5">
+    <div class="flex items-center justify-center mt-4 mb-6">
+      <img src="/logo.png" alt="" class="mr-2" width="95" height="95" />
+      <h1 class="text-4xl font-bold">Kakeru</h1>
+    </div>
+
+    <p class="text-center">Drawing app on browser</p>
+
+    <a
+      href="https://kakeru.app"
+      target="_blank"
+      class="bg-blue-500 rounded p-2 text-white block mx-auto w-fit mt-6"
+      >Try it now</a
+    >
+
+    <img src="/screenshot.png" alt="Screenshot of Kakeru" class="w-full my-6" />
+
+    <h2 class="mt-10 mb-6 text-3xl font-bold text-center">Features</h2>
+
+    <div class="md:flex md:gap-4">
+      <div class="flex-1 mb-4">
+        <Icon name="mdi:draw" class="mx-auto text-gray-400" size={100} />
+        <p>
+          You can draw with your mouse or finger on any device: laptop,
+          smartphone, tablet, etc. Styluses (includes Apple Pencil) are also
+          supported.
+        </p>
+      </div>
+      <div class="flex-1 mb-4">
+        <Icon name="mdi:share" class="mx-auto text-gray-400" size={100} />
+        <p>
+          You can share your drawing by sending URL. In addition, multiple
+          people can draw together at the same time.
+        </p>
+      </div>
+      <div class="flex-1 mb-4">
+        <Icon
+          name="mdi:file-export-outline"
+          class="mx-auto text-gray-400"
+          size={100}
+        />
+        <p>
+          Your drawing can be exported as SVG image and you can embed it to your
+          Wiki or Markdown documents.
+        </p>
+      </div>
+    </div>
+
+    <div class="md:flex md:gap-4 mt-8">
+      <div class="flex-1 mb-4">
+        <Icon
+          name="mdi:arrow-expand-all"
+          class="mx-auto text-gray-400"
+          size={100}
+        />
+        <p>
+          You can scroll the canvas infinitely and write anywhere. There is no
+          size limit like paper.
+        </p>
+      </div>
+      <div class="flex-1 mb-4">
+        <Icon
+          name="mdi:account-edit"
+          class="mx-auto text-gray-400"
+          size={100}
+        />
+        <p>
+          To enable palm rejection while using styluses, tap a button with
+          finger icon and red slash:
+          <img
+            src="/palm-rejection.png"
+            width="40"
+            height="30"
+            class="inline-block"
+          />
+        </p>
+      </div>
+    </div>
+
+    <h2 class="mt-10 mb-4 text-3xl font-bold text-center">Links</h2>
+
+    <div class="md:flex">
+      <div class="flex-1 text-center">
+        <Icon name="mdi:twitter" class="mx-auto text-gray-400" size={100} />
+        <p>
+          <a
+            href="https://twitter.com/kakeru_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline text-xl">Twitter</a
+          >
+        </p>
+        <p>Follow us and keep in touch!</p>
+      </div>
+      <div class="flex-1 text-center">
+        <Icon name="mdi:coffee" class="mx-auto text-gray-400" size={100} />
+        <p>
+          <a
+            href="https://www.buymeacoffee.com/odiak"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline text-xl">Buy Me a Coffee</a
+          >
+        </p>
+        <p>Please support our development!</p>
+      </div>
+    </div>
+
+    <p class="mt-10 text-center">&copy; 2020 Kaido Iwamoto</p>
   </div>
 </Layout>
