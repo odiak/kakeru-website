@@ -70,6 +70,7 @@ import { Icon } from 'astro-icon/components'
           スタイラスを使用するとき、次のようなアイコンのボタンをタップして指では線が書き込まれないようにすることができます:
           <img
             src="/palm-rejection.png"
+            alt="パームリジェクションのボタン"
             width="40"
             height="30"
             class="inline-block"
@@ -80,30 +81,34 @@ import { Icon } from 'astro-icon/components'
 
     <h2 class="mt-10 mb-4 text-3xl font-bold text-center">Links</h2>
 
-    <div class="md:flex">
+    <div class="md:flex md:gap-8">
       <div class="flex-1 text-center">
-        <Icon name="mdi:twitter" class="mx-auto text-gray-400" size={100} />
-        <p>
+        <p class="mb-2">
           <a
             href="https://twitter.com/kakeru_app"
             target="_blank"
             rel="noopener noreferrer"
-            class="underline text-xl">Twitter</a
+            class="underline text-xl"
           >
+            <Icon name="mdi:twitter" class="mx-auto text-gray-400" size={100} />
+            Twitter
+          </a>
         </p>
         <p>
           フォローしていただくと、アプリの更新情報などをいち早く入手できます！
         </p>
       </div>
       <div class="flex-1 text-center">
-        <Icon name="mdi:coffee" class="mx-auto text-gray-400" size={100} />
-        <p>
+        <p class="mb-2">
           <a
             href="https://www.buymeacoffee.com/odiak"
             target="_blank"
             rel="noopener noreferrer"
-            class="underline text-xl">Buy Me a Coffee</a
+            class="underline text-xl"
           >
+            <Icon name="mdi:coffee" class="mx-auto text-gray-400" size={100} />
+            Buy Me a Coffee
+          </a>
         </p>
         <p>よろしければ、開発を支援していただけるとありがたいです</p>
       </div>
