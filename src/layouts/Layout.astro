@@ -1,26 +1,39 @@
 ---
-import i18next from 'i18next'
-import { HeadHrefLangs, LanguageSelector } from 'astro-i18next/components'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import LanguageSelector from '../components/LanguageSelector.astro'
+import { unprefixPath } from '../utils/i18n'
 
 export interface Props {
   title: string
 }
 
 const { title } = Astro.props
+
+const locales = ['en', 'ja']
+const path = unprefixPath(Astro.url.pathname, Astro.currentLocale ?? 'en')
 ---
 
-<!DOCTYPE html>
-<html lang={i18next.language}>
+<!doctype html>
+<html lang={Astro.currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <title>{title}</title>
-    <HeadHrefLangs />
+    {
+      locales.map((locale) => (
+        <link
+          rel="alternate"
+          hreflang={locale}
+          href={getRelativeLocaleUrl(locale, path)}
+        />
+      ))
+    }
   </head>
   <body>
     <slot />
-    <LanguageSelector class="fixed top-0 right-0" />
+
+    <LanguageSelector />
 
     <style>
       :root {
@@ -54,8 +67,15 @@ const { title } = Astro.props
       }
 
       code {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
       }
     </style>
   </body>

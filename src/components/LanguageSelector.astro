@@ -1,0 +1,29 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { unprefixPath } from '../utils/i18n'
+
+const locales = ['en', 'ja']
+const { currentLocale = 'en' } = Astro
+
+const path = unprefixPath(Astro.url.pathname, currentLocale)
+---
+
+<div class="fixed top-0 right-0 p-3 bg-white bg-opacity-90">
+  {
+    locales.map((locale, i) => (
+      <>
+        {i !== 0 && ' / '}
+        {locale === currentLocale ? (
+          <span>{locale.toUpperCase()}</span>
+        ) : (
+          <a
+            href={getRelativeLocaleUrl(locale, path)}
+            class="underline text-blue-500 inline-block"
+          >
+            {locale.toUpperCase()}
+          </a>
+        )}
+      </>
+    ))
+  }
+</div>
